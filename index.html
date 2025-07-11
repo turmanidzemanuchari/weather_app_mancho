@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App 🌤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-container">
+        <header class="weather-header">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter a city...">
+                <button id="search-button">Search</button>
+            </div>
+            <button id="temp-toggle-button" class="temp-toggle">&deg;C / &deg;F</button>
+        </header>
+
+        <main id="weather-body">
+            <div id="loader" class="loader"></div>
+            <div id="error-message" class="error-message"></div>
+
+            <section id="current-weather-section" class="current-weather-card" style="display:none;">
+                <div class="location-details">
+                    <h2 id="city-name"></h2>
+                    <p id="weather-description"></p>
+                </div>
+                <div class="current-weather-info">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                    <p id="temperature"></p>
+                    <div class="additional-info">
+                        <p>Humidity: <span id="humidity"></span></p>
+                        <p>Wind: <span id="wind-speed"></span></p>
+                        <p>Sunrise: <span id="sunrise-time"></span></p>
+                        <p>Sunset: <span id="sunset-time"></span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="forecast-section" class="forecast-container" style="display:none;">
+                <h3>5-Day Forecast</h3>
+                <div id="forecast-cards" class="forecast-grid">
+                    </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
